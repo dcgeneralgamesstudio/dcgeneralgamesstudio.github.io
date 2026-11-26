@@ -1,0 +1,94 @@
+/* Generado por tools/sitio/generar_sitio.py — no editar a mano. */
+@font-face{font-family:"Lilita One";src:url("LilitaOne-Regular.ttf") format("truetype");font-display:swap}
+:root{--fondo:#f3e6cc;--papel:#fbf4e4;--tinta:#3a2617;--suave:#6e5440;--acento:#a3412a;--acento2:#c77b2b;--borde:#d8c2a0;--sombra:rgba(58,38,23,.12);
+--cielo1:#fcefd2;--cielo2:#f3c184;--sol:#f9dc94;--mesa1:#d08a52;--mesa2:#a5502b;--ok:#2f6b34;--ok-fondo:#e1ecd5;--texto-boton:#fff8ec}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--fondo:#1b130d;--papel:#261b13;--tinta:#f1e3c8;--suave:#c6ae8f;--acento:#e8895a;--acento2:#e3a64f;--borde:#4a3627;--sombra:rgba(0,0,0,.4);
+--cielo1:#22150e;--cielo2:#5e2f1c;--sol:#d98a45;--mesa1:#4b2818;--mesa2:#311a10;--ok:#9bd3a1;--ok-fondo:#1f3322;--texto-boton:#1b130d}}
+:root[data-theme="dark"]{--fondo:#1b130d;--papel:#261b13;--tinta:#f1e3c8;--suave:#c6ae8f;--acento:#e8895a;--acento2:#e3a64f;--borde:#4a3627;--sombra:rgba(0,0,0,.4);
+--cielo1:#22150e;--cielo2:#5e2f1c;--sol:#d98a45;--mesa1:#4b2818;--mesa2:#311a10;--ok:#9bd3a1;--ok-fondo:#1f3322;--texto-boton:#1b130d}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{margin:0;background:var(--fondo);color:var(--tinta);font:17px/1.6 system-ui,-apple-system,"Segoe UI",Roboto,"Noto Sans",sans-serif;overflow-wrap:anywhere}
+a{color:var(--acento)}
+.latino h1,.latino h2,.latino h3,.latino .marca,.latino .boton{font-family:"Lilita One",system-ui,sans-serif;font-weight:400;letter-spacing:.01em}
+.otro h1,.otro h2,.otro h3,.otro .marca,.otro .boton{font-weight:700}
+/* Barra de arriba */
+.arriba{display:flex;flex-wrap:wrap;gap:12px;align-items:center;justify-content:space-between;padding:10px 16px;border-bottom:3px double var(--borde);background:var(--papel)}
+.marca{font-size:1.15rem;color:var(--tinta);text-decoration:none}
+.estrellita{color:var(--acento2)}
+.idioma{display:flex;gap:8px;align-items:center;font-size:.9rem;color:var(--suave)}
+.idioma select{font:inherit;color:var(--tinta);background:var(--fondo);border:1px solid var(--borde);border-radius:8px;padding:6px 8px;max-width:60vw}
+.caja{max-width:960px;margin:0 auto;padding:0 16px}
+.caja.estrecha{max-width:760px;padding-top:24px}
+/* Cabecera de la portada */
+.heroe{background:linear-gradient(180deg,var(--cielo1) 0%,var(--cielo1) 30%,var(--cielo2) 100%);text-align:center;overflow:hidden}
+.heroe-txt{padding:44px 16px 6px;max-width:760px;margin:0 auto}
+.sello{width:76px;height:76px;filter:drop-shadow(0 3px 0 var(--sombra))}
+.heroe h1{font-size:clamp(2.1rem,8.5vw,3.6rem);line-height:1.08;margin:.25em 0 .2em;color:var(--acento);text-shadow:0 2px 0 var(--papel)}
+.lema{color:var(--tinta);font-size:clamp(1.05rem,3.6vw,1.3rem);margin:0 auto 22px;max-width:30em}
+.paisaje{display:block;width:100%;height:clamp(110px,17vw,200px);margin-top:-6px}
+.paisaje .sol{fill:var(--sol)}
+.paisaje .m1{fill:var(--mesa1)}
+.paisaje .m2,.paisaje .cactus{fill:var(--mesa2)}
+.paisaje .suelo{fill:var(--fondo)}
+/* Botones */
+.boton{display:inline-block;padding:12px 22px;border-radius:12px;background:var(--acento);color:var(--texto-boton);text-decoration:none;font-size:1.05rem;line-height:1.3;box-shadow:0 4px 0 #6e2a1a;transition:transform .12s ease,box-shadow .12s ease,filter .12s ease}
+.boton:hover{filter:brightness(1.08)}
+.boton:active{transform:translateY(3px);box-shadow:0 1px 0 #6e2a1a}
+.boton:focus-visible,a:focus-visible,select:focus-visible{outline:3px solid var(--acento2);outline-offset:2px}
+/* Secciones */
+section{scroll-margin-top:16px}
+.titulo{display:flex;align-items:center;justify-content:center;gap:14px;font-size:clamp(1.5rem,5vw,1.9rem);line-height:1.2;color:var(--acento);margin:0 0 18px;text-align:center}
+.titulo::before,.titulo::after{content:"";flex:1 1 0;max-width:110px;border-top:3px double var(--borde)}
+.nosotros{max-width:680px;margin:40px auto 0;text-align:center;font-size:1.06rem}
+.nosotros p{margin:0 0 .8em}
+.juegos{margin-top:52px}
+/* Tarjeta del juego */
+.juego{display:grid;background:var(--papel);border:2px solid var(--borde);border-radius:18px;overflow:hidden;box-shadow:0 5px 0 var(--sombra),0 16px 36px var(--sombra)}
+.foto{margin:0;background:var(--borde);min-height:0}
+.foto img{display:block;width:100%;height:auto;aspect-ratio:16/9;object-fit:cover}
+.juego-txt{padding:20px 20px 24px}
+.etiquetas{display:flex;flex-wrap:wrap;align-items:center;gap:8px 12px;margin:0 0 8px}
+.genero{font-size:.82rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--acento2)}
+.pronto{display:inline-flex;align-items:center;gap:7px;font-size:.82rem;font-weight:700;padding:3px 11px;border-radius:999px;background:var(--ok-fondo);color:var(--ok)}
+.punto{width:8px;height:8px;border-radius:50%;background:currentColor;flex:none}
+.juego h3{margin:0 0 .25em;font-size:clamp(1.9rem,6vw,2.3rem);line-height:1.1;color:var(--tinta)}
+.juego-txt>p{margin:0 0 12px}
+.rasgos{list-style:none;padding:0;margin:14px 0 0}
+.rasgos li{position:relative;padding-inline-start:1.7em;margin:.45em 0}
+.rasgos li::before{content:"★";position:absolute;inset-inline-start:0;top:0;color:var(--acento2)}
+@media (min-width:800px){
+.juego{grid-template-columns:minmax(0,1.15fr) minmax(0,1fr)}
+.juego.sin-foto{grid-template-columns:1fr}
+.foto img{height:100%;aspect-ratio:auto;min-height:300px}
+.juego-txt{padding:28px 30px;align-self:center}
+}
+/* Contacto */
+.contacto{margin-top:52px}
+.sobre{text-align:center;background:var(--papel);border:2px dashed var(--borde);border-radius:18px;padding:28px 18px 30px;max-width:680px;margin:0 auto}
+.icono-sobre{width:52px;height:52px;fill:none;stroke:var(--acento);stroke-width:3;stroke-linejoin:round;stroke-linecap:round}
+.sobre h2{margin:.2em 0 .3em;font-size:1.6rem;color:var(--acento)}
+.sobre p{margin:0 auto 18px;max-width:32em}
+.boton.correo{font-size:clamp(.82rem,3.9vw,1rem);max-width:100%;padding-inline:clamp(12px,4vw,22px);overflow-wrap:anywhere}
+.otro .boton.correo{font-family:system-ui,sans-serif}
+/* Política */
+.juego-nombre{margin:0;color:var(--acento2);font-weight:700;text-transform:uppercase;letter-spacing:.06em;font-size:.85rem}
+.politica h1{font-size:clamp(1.8rem,6vw,2.4rem);color:var(--acento);margin:.1em 0 .2em}
+.politica h2{font-size:1.3rem;margin:1.6em 0 .4em;padding-bottom:.2em;border-bottom:1px solid var(--borde)}
+.politica section:target{background:var(--papel);border-radius:10px;padding:4px 12px;margin:0 -12px}
+.fecha{color:var(--suave);font-size:.95rem}
+.volver{margin-top:2em}
+[dir="rtl"] .flecha{display:inline-block;transform:scaleX(-1)}
+ul{padding-inline-start:1.3em}
+li{margin:.35em 0}
+/* Pie de página: lo legal va aquí, chico y al final */
+.pie{margin-top:56px;padding:20px 16px 28px;background:var(--papel);border-top:3px double var(--borde);text-align:center;color:var(--suave);font-size:.85rem}
+.legal{display:flex;flex-wrap:wrap;justify-content:center;gap:0 18px;margin:0 auto 6px;max-width:760px}
+.legal a{display:inline-block;padding:6px 2px;color:var(--suave);text-underline-offset:3px}
+.legal a:hover{color:var(--acento)}
+.pie p{margin:.2em 0}
+/* Página para elegir idioma */
+.raiz{text-align:center;max-width:760px;margin:0 auto;padding:24px 16px 40px}
+.lista-idiomas{list-style:none;padding:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(140px,1fr));gap:8px}
+.lista-idiomas a{display:block;padding:10px;background:var(--papel);border:1px solid var(--borde);border-radius:10px;text-decoration:none}
